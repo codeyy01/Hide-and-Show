@@ -5,15 +5,26 @@
 }
 
 body{
-    background: rgba(121, 85, 85, 0.822);
+    background: var(--primary-color)
 }
 
-div{
-    width: 50%;
+:root{
+    --primary-color :  rgba(196, 166, 166, 0.822);
+    --secondary-color : rgb(241, 214, 214);
+}
+
+.dark-theme{
+    --primary-color :  rgba(56, 54, 54, 0.822);
+    --secondary-color : rgb(190, 184, 184);
+}
+
+
+#form{
+    width: 65%;
     max-width: 400px;
     height: 5em;
     border-radius: 20px 0px;
-    background: rgb(241, 210, 210);
+    background: var(--secondary-color);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -37,11 +48,20 @@ div{
 input{
     outline: none;
     border: none;
-    background: rgb(241, 210, 210);
+    background: var(--secondary-color);
     font-size: larger;
 }
 
 #eyeIcon{
     width: 2.5em;
+    cursor: pointer;
+}
+
+#icon {
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
     cursor: pointer;
 }
