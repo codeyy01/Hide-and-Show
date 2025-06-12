@@ -1,43 +1,47 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-body{
+*{
     margin: 0;
     padding: 0;
-    background: rgba(175, 224, 226, 0.719);
+    box-sizing: border-box;
 }
 
+body{
+    background: rgba(121, 85, 85, 0.822);
+}
 
-
-form{
+div{
+    width: 50%;
+    max-width: 400px;
     height: 5em;
-    width: 20em;
-    max-width: 500px;
-    background: #96c0db;
-    border-radius: 14px;
+    border-radius: 20px 0px;
+    background: rgb(241, 210, 210);
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
+    top: 50%;
+    transform: translate(-50% , -50%);
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
+    border: none;
+    animation: move 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes move{
+    0%, 100%{
+        transform: translate(-50% , -50%) scale(1);
+    }
+    50%{
+        transform: translate(-50% , -50%) scale(1.02);
+    }
 }
 
 input{
-    background: #96c0db;
-    padding: 0.2em;
-    margin-left: 6px;
     outline: none;
     border: none;
+    background: rgb(241, 210, 210);
     font-size: larger;
 }
 
-form img{
-    width: 2em;
+#eyeIcon{
+    width: 2.5em;
     cursor: pointer;
 }

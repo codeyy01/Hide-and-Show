@@ -1,6 +1,13 @@
-let showpass = document.getElementById("show_password");
+let eyeIcon = document.getElementById("eyeIcon");
 let password = document.getElementById("password");
 
-showpass.onclick = ()=>{
-    password.style.visibility = "visible";
+eyeIcon.onclick = ()=>{
+    if(password.type == "password"){
+        password.type = "text";
+        eyeIcon.src="images/eye-open.png";
+
+    }else{
+        password.type = "password";
+        eyeIcon.src="images/eye-close.png";
+    }
 }
